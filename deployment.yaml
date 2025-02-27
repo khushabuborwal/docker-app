@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python-app
+spec:
+  replicas: 2  # Deploy at least 2 replicas
+  selector:
+    matchLabels:
+      app: my-python-app
+  template:
+    metadata:
+      labels:
+        app: my-python-app
+    spec:
+      containers:
+        - name: my-python-app
+          image: my_python_app:latest  # Make sure this matches your built image
+          imagePullPolicy: Never
+          command: ["tail", "-f", "/dev/null"]
+          ports:
+            - containerPort: 80

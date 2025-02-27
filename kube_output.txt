@@ -1,0 +1,3 @@
+NAME                            READY   STATUS    RESTARTS   AGE
+my-python-app-846b85df7-r54zq   1/1     Running   0          49s
+my-python-app-846b85df7-wmgwg   1/1     Running   0          52s
